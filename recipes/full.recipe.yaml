@@ -15,5 +15,4 @@ install_files: >-
   *.yaml
   lua/*.*
   lua/cold_word_drop/*.*
-  lua/sbxlm/*.*
   lua/moqi/*.*
