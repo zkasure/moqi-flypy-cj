@@ -4,10 +4,12 @@
 config_version: '0.50'
 
 schema_list:
-  - schema: moqi_wan_flypymo # 墨奇·小鹤+墨奇形 （推荐）
-  - schema: moqi_wan_zrm # 墨奇·自然码+自然码部首辅助码
-  - schema: moqi_wan_flypy # 墨奇·小鹤+鹤形 鹤形+鹤拼, 小鹤官方就只有8000字左右
-  - schema: moqi_single_xh # 墨奇码·顶屏版·小鹤双拼，为了4码自动上屏 只收录了8000字
+  - schema: moqi_wan_flypycj
+  
+  # - schema: moqi_wan_flypymo # 墨奇·小鹤+墨奇形 （推荐）
+  # - schema: moqi_wan_zrm # 墨奇·自然码+自然码部首辅助码
+  # - schema: moqi_wan_flypy # 墨奇·小鹤+鹤形 鹤形+鹤拼, 小鹤官方就只有8000字左右
+  # - schema: moqi_single_xh # 墨奇码·顶屏版·小鹤双拼，为了4码自动上屏 只收录了8000字
 
 
   # - schema: moqi_wan_zrm_hx # 墨奇·自然码+汉心码辅助码
@@ -37,7 +39,7 @@ switcher:
   option_list_separator: '／'
 
 menu:
-  page_size: 6 #候选项数
+  page_size: 4 #候选项数
   
 style:
   horizontal: false #横排为true
@@ -151,16 +153,16 @@ key_binder:
     # - { when: always, toggle: full_shape, accept: Control+Shift+percent }       # 切换全半角
 
     # emacs_editing:
-    # - { when: composing, accept: Control+p, send: Up }
-    # - { when: composing, accept: Control+n, send: Down }
-    # - { when: composing, accept: Control+b, send: Left }
-    # - { when: composing, accept: Control+f, send: Right }
-    # - { when: composing, accept: Control+a, send: Home }
-    # - { when: composing, accept: Control+e, send: End }
-    # - { when: composing, accept: Control+d, send: Delete }
+    - { when: composing, accept: Control+p, send: Up }
+    - { when: composing, accept: Control+n, send: Down }
+    - { when: composing, accept: Control+b, send: Left }
+    - { when: composing, accept: Control+f, send: Right }
+    - { when: composing, accept: Control+a, send: Home }
+    - { when: composing, accept: Control+e, send: End }
+    - { when: composing, accept: Control+d, send: Delete }
     - { when: composing, accept: Control+k, send: Shift+Delete }
     # - { when: composing, accept: Control+h, send: BackSpace }
-    # - { when: composing, accept: Control+g, send: Escape }
+    - { when: composing, accept: Control+g, send: Escape }
     # - { when: composing, accept: Control+bracketleft, send: Escape }
     # - { when: composing, accept: Control+y, send: Page_Up }
     # - { when: composing, accept: Alt+v, send: Page_Up }
