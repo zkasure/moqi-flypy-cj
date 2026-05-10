@@ -5,7 +5,7 @@ config_version: '0.50'
 
 schema_list:
   - schema: moqi_wan_flypycj
-  
+
   # - schema: moqi_wan_flypymo # 墨奇·小鹤+墨奇形 （推荐）
   # - schema: moqi_wan_zrm # 墨奇·自然码+自然码部首辅助码
   # - schema: moqi_wan_flypy # 墨奇·小鹤+鹤形 鹤形+鹤拼, 小鹤官方就只有8000字左右
@@ -16,7 +16,7 @@ schema_list:
   # - schema: moqi_wan_ms_wb # 墨奇·微软+五笔
   # - schema: moqi_wan_sogou # 墨奇·搜狗+墨奇形
   # - schema: moqi_wan_flypyhu # 墨奇·小鹤+虎形
-  
+
   # - schema: moqi_wan_jdh  # 墨奇·小鹤+简单鹤
   # - schema: moqi_wan_quanpin_moqi  # 墨奇·全拼+墨奇形
   # - schema: moqi_wan_abc_mo # 墨奇·智能abc双拼+墨奇
@@ -30,9 +30,9 @@ switcher:
     - ascii_mode
     - full_shape
     - traditionalization
-    - emoji
+    # - emoji
     - chaifen
-    - mars
+    # - mars
     - ascii_punct
   fold_options: true
   abbreviate_options: true
@@ -40,7 +40,7 @@ switcher:
 
 menu:
   page_size: 4 #候选项数
-  
+
 style:
   horizontal: false #横排为true
 

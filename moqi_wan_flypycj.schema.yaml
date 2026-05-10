@@ -24,7 +24,7 @@ schema:
     - cangjie5
     - stroke
     - zrlf
-    - emoji
+    # - emoji
     - easy_en
     - jp_sela
 
@@ -141,20 +141,3 @@ key_binder:
     - { when: has_menu, accept: Shift+Z, send_sequence: "{Shift+Right}z{Shift+Right}" }
 # 启用語言模型
 __include: moqi:/octagram/enable_for_sentence
-
-custom_phrase:
-  dictionary: ""
-  user_dict: custom_phrase/custom_phrase
-  db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 100001
-
-# 3码出简让全
-custom_phrase_3_code:
-  dictionary: ""
-  user_dict: custom_phrase/custom_phrase_3_code
-  db_class: stabledb
-  enable_sentence: false
-  enable_completion: false
-  initial_quality: 100001 #本表词和系统词重码居后
