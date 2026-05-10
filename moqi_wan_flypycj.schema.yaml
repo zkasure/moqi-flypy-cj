@@ -24,9 +24,7 @@ schema:
     - cangjie5
     - stroke
     - zrlf
-    # - emoji
     - easy_en
-    - jp_sela
 
 __include: moqi.yaml:/switches_engine
 __include: moqi.yaml:/phrase # 置顶

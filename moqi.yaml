@@ -37,7 +37,6 @@ switches_engine:
       - affix_segmentor@add_user_dict
       - affix_segmentor@verbatim ## not as the last of this list
       - affix_segmentor@easy_en_simp
-      - affix_segmentor@jp_sela
       - fallback_segmentor
     translators:
       - punct_translator
