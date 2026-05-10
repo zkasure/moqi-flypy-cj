@@ -64,10 +64,10 @@ function M.func(input, env)
             local preedit_str = cand.preedit
             if utf8.len(preedit_str) <= 3 and isAllLetters(preedit_str) then
                 local stick_phrase = env.fixed[preedit_str] or ""
-                if stick_phrase ~= "" and first_cand.text ~= stick_phrase then
-                    -- first_cand.comment = stick_phrase .. "⚡"  -- 在注释后面加上闪电符号，表示快速输入，不想要置空
-                    first_cand.comment = stick_phrase
-                end
+                -- if stick_phrase ~= "" and first_cand.text ~= stick_phrase then
+                --     -- first_cand.comment = stick_phrase .. "⚡"  -- 在注释后面加上闪电符号，表示快速输入，不想要置空
+                --     first_cand.comment = stick_phrase
+                -- end
                 yield(first_cand)
                 found = true
             end
@@ -81,7 +81,8 @@ function M.func(input, env)
         local preedit_str = env.engine.context.input
         local stick_phrase = env.fixed[preedit_str] or ""
         if stick_phrase ~= "" then
-            yield(create_candidate(stick_phrase, "⚡"))  -- 在注释中加上闪电符号，表示快速输入，不想要置空
+            -- yield(create_candidate(stick_phrase, "⚡"))  -- 在注释中加上闪电符号，表示快速输入，不想要置空
+            yield(create_candidate(stick_phrase, ""))  -- 在注释中加上闪电符号，表示快速输入，不想要置空
         end
     end
 end
