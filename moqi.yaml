@@ -36,7 +36,6 @@ switches_engine:
 
       - affix_segmentor@add_user_dict
       - affix_segmentor@verbatim ## not as the last of this list
-      - affix_segmentor@easy_en_simp
       - fallback_segmentor
     translators:
       - punct_translator
@@ -50,7 +49,6 @@ switches_engine:
       - table_translator@custom_phrase_super_3jian
       - table_translator@custom_phrase_super_3jian_no_conflict
       - table_translator@custom_phrase_super_4jian_no_conflict
-      - table_translator@easy_en_simp ## 添加注释后：停用单词输入
       # 反查翻译器
       - reverse_lookup_translator
       - table_translator@reverse_moqima
@@ -305,19 +303,7 @@ guide:
       #造词
       add_user_dict: "^ac[A-Za-z]*$"
 
-      easy_en_simp: "^aw[a-z]*"
 
-  easy_en_simp:
-    tag: easy_en_simp
-    dictionary: easy_en
-    enable_completion: true
-    enable_sentence: false
-    prefix: "aw"
-    # suffix: "'"
-    tips: "英文单词（可去元音）"
-    spelling_hints: 9
-    comment_format:
-      - xform/^.+$//
 
   # Lua 配置：长词优先
   # 提升 count 个词语，插入到第 idx 个位置。
